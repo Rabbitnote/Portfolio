@@ -30,10 +30,10 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.dev>
+      <motion.div>
         <p className={`${styles.sectionSubText}`}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.dev>
+      </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-seconday text-[17px] max-w-3xl -leading-[30px]"

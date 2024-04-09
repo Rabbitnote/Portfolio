@@ -25,7 +25,12 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import agnos from "./company/agnos.png";
+import innovasive from "./company/innovasive.png";
 
+import synthia from "./synthia.jpg";
+import mevaccine from "./mevaccine.png";
+import setthi from "./setthi.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
@@ -44,6 +49,11 @@ export {
   figma,
   git,
   html,
+  agnos,
+  innovasive,
+  setthi,
+  mevaccine,
+  synthia,
   javascript,
   mongodb,
   nodejs,

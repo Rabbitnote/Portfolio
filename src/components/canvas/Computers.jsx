@@ -5,7 +5,7 @@ import CanvasLoader from "../Loader";
 extend({ OrbitControls });
 
 const Computers = () => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF("./planet_earth/scene.gltf");
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -52,11 +52,12 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [20, 3, 5], fov: 15 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
+        autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
