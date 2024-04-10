@@ -97,18 +97,34 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.glass {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
 .black-text-gradient {
   /* background: -webkit-linear-gradient(#eee, #333); */
-  background: #8B939A; /* fallback for old browsers */
+  background: #8b939a; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
-    #8B939A,
-    #5B6467
+    #8b939a,
+    #5b6467
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to top,
-    #8B939A,
-    #5B6467
+    #8b939a,
+    #5b6467
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
