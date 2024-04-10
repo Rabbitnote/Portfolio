@@ -130,7 +130,7 @@ const experiences = [
     company_name: "Innovasive",
     icon: innovasive,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "March 2023 - Present",
     points: [
       "Developing and maintaining web applications using React.js, NextJs. and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
