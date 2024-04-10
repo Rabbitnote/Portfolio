@@ -49,7 +49,7 @@ const Contact = () => {
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-      <motion.div
+      {/* <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
@@ -100,10 +100,10 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
-      </motion.div>
+      </motion.div> */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className=" xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className=" xl:flex-1 xl:h-[500px] md:h-[550px] h-[550px] "
       >
         <EarthCanvas />
       </motion.div>

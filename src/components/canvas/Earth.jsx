@@ -5,7 +5,7 @@ import CanvasLoader from "../Loader";
 extend({ OrbitControls });
 
 const Earth = () => {
-  const Earth = useGLTF("./earth/scene.gltf");
+  const Earth = useGLTF("./astronaut/scene.gltf");
   return (
     <mesh>
       <hemisphereLight intensity={3} groundColor="black" />
@@ -28,10 +28,10 @@ const Earth = () => {
 const EarthCanvas = () => {
   return (
     <Canvas
-      shadows
+      // shadows
       frameloop="demand"
       gl={{ preserveDrawingBuffer: true }}
-      camera={{ fov: 55, near: 0.1, far: 200, position: [-4, 3, 6] }}
+      camera={{ fov: 10, near: 0.1, far: 1000, position: [20, 100, -10] }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
