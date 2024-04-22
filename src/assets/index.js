@@ -28,6 +28,8 @@ import tesla from "./company/tesla.png";
 import agnos from "./company/agnos.png";
 import innovasive from "./company/innovasive.png";
 
+import figmaclone from "./figmaclone.png";
+import demologo from './demo.png'
 import synthia from "./synthia.jpg";
 import mevaccine from "./mevaccine.png";
 import setthi from "./setthi.png";
@@ -68,5 +70,7 @@ export {
   tesla,
   carrent,
   jobit,
+  demologo,
+  figmaclone,
   tripguide,
 };

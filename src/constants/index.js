@@ -27,6 +27,7 @@ import {
   threejs,
   setthi,
   mevaccine,
+  figmaclone,
   synthia,
 } from "../assets";
 
@@ -136,7 +137,7 @@ const experiences = [
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Contrbuted core design system and converted Figmatoken to tailwind config file",
       "Research E2E testing and Unit testing for reduced proccess occur bug.",
-      "Experienced with Craft components for teams and researching the best component for all projects flexible. Also, craft component calendar display like Microsoft Team and make EditorJs similar to Medium"
+      "Experienced with Craft components for teams and researching the best component for all projects flexible. Also, craft component calendar display like Microsoft Team and make EditorJs similar to Medium",
     ],
   },
 ];
@@ -181,6 +182,28 @@ const projects = [
     ],
     image: setthi,
     source_code_link: "https://github.com/GGolfz/Setthi",
+  },
+  {
+    name: "Figma Clone",
+    description:
+      "Creating Real-time Figma clone using Liveblocks library to help in part collaboration. You can check this website in the demo logo. ",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "black-text-gradient",
+      },
+      {
+        name: "Typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Liveblocks",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: figmaclone,
+    demo:"https://figma-clone-chi-seven.vercel.app/",
+    source_code_link: "https://github.com/Rabbitnote/figmaClone",
   },
   {
     name: "MeVaccine",
