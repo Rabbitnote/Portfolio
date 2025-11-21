@@ -131,7 +131,7 @@ const experiences = [
     company_name: "Innovasive",
     icon: innovasive,
     iconBg: "#E6DEDD",
-    date: "March 2023 - Present",
+    date: "March 2023 - May 2024",
     points: [
       "Developing and maintaining web applications using React.js, NextJs. and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -202,7 +202,7 @@ const projects = [
       },
     ],
     image: figmaclone,
-    demo:"https://figma-clone-chi-seven.vercel.app/",
+    demo: "https://figma-clone-chi-seven.vercel.app/",
     source_code_link: "https://github.com/Rabbitnote/figmaClone",
   },
   {
