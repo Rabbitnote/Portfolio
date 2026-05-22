@@ -29,6 +29,7 @@ import agnos from "./company/agnos.png";
 import innovasive from "./company/innovasive.png";
 
 import figmaclone from "./figmaclone.png";
+import notekeeper from "./notekeeper.png";
 import demologo from './demo.png'
 import synthia from "./synthia.jpg";
 import mevaccine from "./mevaccine.png";
@@ -72,5 +73,6 @@ export {
   jobit,
   demologo,
   figmaclone,
+  notekeeper,
   tripguide,
 };

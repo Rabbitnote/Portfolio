@@ -3,38 +3,34 @@ import { motion } from "framer-motion";
 import { styles } from "../style";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
-import React from "react";
 import { fadeIn, textVariant } from "../utils/motion";
 import { demologo } from "../assets";
-import squidexService from "../service/squidex";
+import { projects } from "../constants";
 
-const ProjectCard = ({ data, index }: { data: any; index: number }) => {
-  const imageId = data.data.image.iv?.[0];
-  const imageUrl = imageId
-    ? squidexService.getAssetUrl(imageId, {
-        width: 720,
-        height: 400,
-        quality: 90,
-      })
-    : "/placeholder.jpg";
+type Project = {
+  name: string;
+  description: string;
+  tags: { name: string; color: string }[];
+  image: string;
+  source_code_link: string;
+  demo?: string;
+};
 
+const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <div className="bg-tertiary p-5 rounded-2xl h-max">
         <div className="relative w-full h-full">
-          {" "}
           <img
-            src={imageUrl}
-            alt={data?.data?.name?.iv}
+            src={project.image}
+            alt={project.name}
             className="w-full h-full object-cover rounded-2xl"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            {data?.data?.demo?.iv && (
+            {project.demo && (
               <div
                 className="w-10 h-10 rounded-full flex justify-center items-center cursor-pointer object-contain mx-2"
-                onClick={() => {
-                  window.open(data?.data?.demo?.iv, "_blank");
-                }}
+                onClick={() => window.open(project.demo, "_blank")}
               >
                 <img
                   src={demologo}
@@ -45,9 +41,7 @@ const ProjectCard = ({ data, index }: { data: any; index: number }) => {
             )}
             <div
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-              onClick={() => {
-                window.open(data?.data?.sourceCodeLink?.iv, "_blank");
-              }}
+              onClick={() => window.open(project.source_code_link, "_blank")}
             >
               <img
                 src={github}
@@ -59,15 +53,13 @@ const ProjectCard = ({ data, index }: { data: any; index: number }) => {
         </div>
 
         <div className="mt-5 min-h-[150px]">
-          <h3 className="text-white font-bold text-[24px]">
-            {data?.data?.name?.iv}
-          </h3>
+          <h3 className="text-white font-bold text-[24px]">{project.name}</h3>
           <p className="mt-2 text-secondary text-[14px] line-clamp-5">
-            {data?.data?.description?.iv}
+            {project.description}
           </p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-          {data?.data?.tags?.iv?.map((tag: any, idx: number) => (
+          {project.tags.map((tag, idx) => (
             <p key={idx} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
@@ -79,20 +71,6 @@ const ProjectCard = ({ data, index }: { data: any; index: number }) => {
 };
 
 const Works = () => {
-  const [projects, setProjects] = React.useState([]);
-
-  React.useEffect(() => {
-    const loadProjects = async () => {
-      try {
-        const data = await squidexService.getContent("projects");
-        setProjects(data);
-      } catch (error) {
-        console.error("Failed to load projects:", error);
-      }
-    };
-    loadProjects();
-  }, []);
-
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -107,8 +85,8 @@ const Works = () => {
           Following projects showcase my skill and experience.
         </motion.p>
         <div className="grid grid-cols-2 mt-20 gap-2 w-full">
-          {projects.map((project: any, index) => (
-            <ProjectCard key={project.id} data={project} index={index} />
+          {projects.map((project, index) => (
+            <ProjectCard key={project.name} project={project} index={index} />
           ))}
         </div>
       </div>

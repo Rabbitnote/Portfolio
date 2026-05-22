@@ -15,20 +15,14 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   agnos,
   innovasive,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   setthi,
   mevaccine,
   figmaclone,
   synthia,
+  notekeeper,
 } from "../assets";
 
 export const navLinks = [
@@ -48,20 +42,20 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full-Stack Developer",
     icon: web,
+  },
+  {
+    title: "Frontend Developer",
+    icon: creator,
+  },
+  {
+    title: "Backend Developer",
+    icon: backend,
   },
   {
     title: "Flutter Developer",
     icon: mobile,
-  },
-  // {
-  //   title: "Backend Developer",
-  //   icon: backend,
-  // },
-  {
-    title: "NextJS Developer",
-    icon: creator,
   },
 ];
 
@@ -87,10 +81,6 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
@@ -114,86 +104,81 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Agnos",
+    title: "Front-End Developer",
+    company_name: "Agnos Health",
     icon: agnos,
     iconBg: "#383E56",
-    date: "Jan 2022 - August 2022",
+    date: "Jan 2022 - Aug 2022",
     points: [
-      "Developing and maintaining web applications in layout mobile using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Research Google analytic and used information to improved the solution reduce drop off from 40% to 20%",
+      "Built and maintained mobile-responsive web interfaces using React.js.",
+      "Used Google Analytics data to redesign onboarding flows — cutting AI diagnostic drop-off from 40% to 20% within 2 months.",
+      "Led end-to-end redesign of agnoshealth.com, improving UX and driving adoption of the Morphom mental health screening tool.",
     ],
   },
   {
-    title: "Nextjs Developer",
+    title: "Front-End Developer",
     company_name: "Innovasive",
     icon: innovasive,
     iconBg: "#E6DEDD",
     date: "March 2023 - May 2024",
     points: [
-      "Developing and maintaining web applications using React.js, NextJs. and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Contrbuted core design system and converted Figmatoken to tailwind config file",
-      "Research E2E testing and Unit testing for reduced proccess occur bug.",
-      "Experienced with Craft components for teams and researching the best component for all projects flexible. Also, craft component calendar display like Microsoft Team and make EditorJs similar to Medium",
+      "Architected the core design system by converting Figma design tokens into Tailwind CSS and global CSS variables.",
+      "Delivered pixel-perfect, cross-browser responsive UI from Figma mockups including Safari-specific edge cases.",
+      "Implemented E2E testing with Cypress to automate regression coverage and reduce manual QA effort.",
+      "Built reusable components including a calendar display (Microsoft Teams-style) and a rich text editor (Medium-style).",
+    ],
+  },
+  {
+    title: "Front-End Developer (Next.js + TypeScript)",
+    company_name: "VIALINK",
+    icon: innovasive,
+    iconBg: "#383E56",
+    date: "July 2024 - Present",
+    points: [
+      "Independently designed and built 10+ major features on an enterprise AI workflow automation platform.",
+      "Architected a visual RPA step builder — drag-and-drop graph canvas with 10+ node types including screenshot capture and output file handling.",
+      "Built a custom AI Copilot chat UI from scratch — message threads, tool call display, reasoning display, and Splitter panel layout.",
+      "Contributed backend Python features — implemented a Count Row Excel workflow piece and fixed a leading-zero data loss bug in Excel file merging using openpyxl.",
     ],
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
+const testimonials = [];
 
 const projects = [
   {
-    name: "Setthi",
+    name: "NoteKeeper",
     description:
-      "Setthi is an expense management application that can help you to manage your expenses and transactions in your daily life and also allow you to split your money by purpose.",
+      "Full-stack real-time collaborative notes app. Built a Go REST API with JWT auth and SSE broker for live sync, PostgreSQL database, and a Next.js Kanban board with drag-and-drop — containerized with Docker.",
     tags: [
       {
-        name: "Flutter",
+        name: "Go",
         color: "blue-text-gradient",
       },
+      {
+        name: "Next.js",
+        color: "black-text-gradient",
+      },
+      {
+        name: "PostgreSQL",
+        color: "green-text-gradient",
+      },
     ],
-    image: setthi,
-    source_code_link: "https://github.com/GGolfz/Setthi",
+    image: notekeeper,
+    demo: "https://note-keeper-3uoi.vercel.app",
+    source_code_link: "https://github.com/Rabbitnote/NoteKeeper",
   },
   {
     name: "Figma Clone",
     description:
-      "Creating Real-time Figma clone using Liveblocks library to help in part collaboration. You can check this website in the demo logo. ",
+      "Real-time collaborative design tool built with Next.js and Liveblocks. Supports multi-user canvas editing with live cursors and presence.",
     tags: [
       {
-        name: "Nextjs",
+        name: "Next.js",
         color: "black-text-gradient",
       },
       {
-        name: "Typescript",
+        name: "TypeScript",
         color: "blue-text-gradient",
       },
       {
@@ -206,38 +191,59 @@ const projects = [
     source_code_link: "https://github.com/Rabbitnote/figmaClone",
   },
   {
+    name: "Synthia",
+    description:
+      "Telemedicine system for NCD patients — WebRTC video calls, appointment management, health data visualization, and payment integration. Built for both patient and doctor interfaces.",
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Next.js",
+        color: "black-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
+        color: "green-text-gradient",
+      },
+    ],
+    image: synthia,
+    source_code_link: "https://github.com/synthia-telemed",
+  },
+  {
     name: "MeVaccine",
     description:
-      "Mo Prom is the application appointment of vaccinating of Covid-19.  It helps the user to register an appointment to getting a vaccine from the COVID-19 situation. It allows users to select a hospital and chooses the time to the appointment. After your vaccination complete it will keep a record of your vaccination in the system of vaccinating.",
+      "COVID-19 vaccination appointment app built with Flutter. Step-by-step reservation UI optimized for elderly users with bilingual support (Thai/English).",
     tags: [
       {
         name: "Flutter",
         color: "blue-text-gradient",
+      },
+      {
+        name: "Dart",
+        color: "green-text-gradient",
       },
     ],
     image: mevaccine,
     source_code_link: "https://github.com/MeVaccine/MeVaccine",
   },
   {
-    name: "Synthia",
+    name: "Setthi",
     description:
-      "Synthia is a telemedicine system designed for Noncommunicable disease (NCD) patients. It was designed as an extension of the existing hospital system. It provides a telemedicine channel for patients and doctors. It can show the appointment, video call with the doctor, and receive the payment using a credit card. Synthia also provides a way for the patient to self-record measurement results such as blood pressure, pulse, and glucose. The system will aggregate the recorded data and visualize them for both patient and the doctor. For this project, we developed two applications for both doctors and patients.",
+      "Personal expense management app built with Flutter. Track daily transactions, categorize spending, and split money by purpose.",
     tags: [
       {
-        name: "Reactjs",
+        name: "Flutter",
         color: "blue-text-gradient",
       },
       {
-        name: "Nextjs",
-        color: "black-text-gradient",
-      },
-      {
-        name: "tailwindcss",
+        name: "Dart",
         color: "green-text-gradient",
       },
     ],
-    image: synthia,
-    source_code_link: "https://github.com/synthia-telemed",
+    image: setthi,
+    source_code_link: "https://github.com/GGolfz/Setthi",
   },
 ];
 
